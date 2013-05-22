@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<!-- #BeginTemplate "ppotalk_main_template.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- #BeginEditable "doctitle" -->
+<title>Forum - PpoTalk.com</title>
+
+<!-- #EndEditable -->
+
+<link href="{{@BASE}}/ui/css/ppotalk_main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="wrap1">
+        <div id="header">
+			header logo and content
+		</div>
+        <div id="main_menu_bar">
+		<!-- #BeginEditable "main_menu_bar" -->
+                
+{{ @main_menu_bar1 }}
+
+<!-- #EndEditable -->
+		</div>        
+        <div id="wrap2">
+        
+<!-- #BeginEditable "main_content" -->
+
+
+            <div id="forum_page_left_column">
+                <div id="forum_topic_list_box">
+                    <!-- header -->
+                    <div id="forum_topic_list_box_header">
+                      TOPICS
+                    </div>
+                    <!-- content -->
+                    <div id="forum_topic_list_box_content">
+                        <repeat group = "{{ @forum_topics }}" value = "{{ @item }}">
+                            <div class='topic_entry'>
+                                <a style='text-decoration:none;' href='/ppotalk/topic/{{ @item.topic_id }}'>
+                                <span> {{ @item.topic_description }} </span>    
+                                </a>
+                            </div>
+                        </repeat>
+                    </div>
+                </div>        
+            </div>
+            
+            <div id="forum_page_center_column">
+                <check if="{{ @topic_id != 0 }}">
+                    <true>
+                    <div id="forum_post_list_box_content">
+                        <repeat group = "{{ @forum_posts }}" value = "{{ @item }}">
+                            <div class='post_entry'>
+
+                                <span> {{ @item.content }} </span>    
+
+                            </div>
+                        </repeat>
+                    </div>
+                    </true>
+                </check>
+            </div>
+            <div id="forum_page_right_column">right content and divs</div>
+            
+<!-- #EndEditable -->
+        
+        </div>
+        
+        <div class="clear"></div>
+        <div id="footer">footer</div>
+    </div>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

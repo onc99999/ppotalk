@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- #BeginEditable "doctitle" -->
+<title>Untitled 1</title>
+
+<!-- #EndEditable -->
+
+<link href="ppotalk_main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="wrap1">
+        <div id="header">
+			header logo and content
+		</div>
+        <div id="main_menu_bar">
+		<!-- #BeginEditable "main_menu_bar" -->
+			<p>(main_menu_bar)</p>
+			
+<!-- #EndEditable -->
+		</div>        
+        <div id="wrap2">
+        
+<!-- #BeginEditable "main_content" -->
+			<p>(main-content)</p>
+<!-- #EndEditable -->
+        
+        </div>
+        
+        <div class="clear"></div>
+        <div id="footer">footer</div>
+    </div>
+
+</body>
+
+</html>
